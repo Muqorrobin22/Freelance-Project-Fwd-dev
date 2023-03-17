@@ -1,5 +1,4 @@
-import styles from "../../styles/Register.module.scss";
-import Menu from "../utils/header/Menu";
+import styles from "../../styles/Header.module.scss";
 import Image from "next/image";
 
 function Header() {

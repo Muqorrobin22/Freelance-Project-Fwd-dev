@@ -1,0 +1,26 @@
+.main {
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.9rem auto 2.3rem;
+    a {
+      margin: 0 1.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 13px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // Responsiveness
+  @media (min-width: 1400px) {
+    padding: 12px 187px;
+  }
+}
