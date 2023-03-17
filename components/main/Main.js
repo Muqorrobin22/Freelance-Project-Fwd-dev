@@ -45,6 +45,19 @@ export default function Main() {
           )
         )}
       </nav>
+
+      <section className={styles.form}>
+        <div className={styles.images}>
+          <Image
+            src={"/images/bg-form.png"}
+            alt="Background Image"
+            quality={100}
+            width={1000}
+            height={100}
+            className={styles.image}
+          />
+        </div>
+      </section>
     </main>
   );
 }

@@ -19,8 +19,17 @@
     }
   }
 
-  // Responsiveness
-  @media (min-width: 1400px) {
-    padding: 12px 187px;
+  .form {
+    margin: 3rem auto 3rem;
+    position: relative;
+    height: 100vh;
+    .images {
+      .image {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+      }
+    }
   }
 }
