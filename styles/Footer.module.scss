@@ -1,0 +1,106 @@
+.footer {
+  .footerTop {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      width: 560px;
+      a {
+        font-family: "Arial";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+      }
+    }
+  }
+
+  .footerMiddle {
+    margin: 3rem 0 3.7rem;
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .footerBottom {
+    display: flex;
+    justify-content: space-between;
+    .first {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        color: var(--bg-header-color);
+      }
+      .FooterLogo {
+        margin-top: 1.75rem;
+        background-color: var(--bg-temporary);
+        width: 112px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+          font-family: "Arial";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 20px;
+          color: #7a7;
+        }
+      }
+    }
+
+    .second {
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      h1 {
+        color: var(--bg-header-color);
+        margin-left: 10.5rem;
+      }
+      .wrap {
+        margin-top: 1.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        .greenTemp {
+          background-color: var(--bg-temporary);
+          width: 112px;
+          height: 30px;
+          margin-right: 2rem;
+          margin-bottom: 1.7rem;
+        }
+      }
+    }
+
+    .third {
+      padding: 0;
+      width: 500px;
+      h1 {
+        color: var(--bg-header-color);
+      }
+      .wrap {
+        margin-top: 1.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .greenTemp {
+          background-color: var(--bg-temporary);
+          width: 112px;
+          height: 30px;
+          margin-bottom: 1.7rem;
+        }
+      }
+    }
+  }
+
+  // Responsiveness
+  @media (min-width: 1400px) {
+    padding: 12px 187px;
+  }
+}
