@@ -22,13 +22,144 @@
   .form {
     margin: 3rem auto 3rem;
     position: relative;
-    height: 100vh;
+    height: 1150px;
     .images {
       .image {
         object-fit: cover;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         position: absolute;
+      }
+    }
+
+    .register {
+      background-color: #eeeeee;
+      opacity: 0.8;
+      margin: 0 auto;
+      width: 535px;
+      height: auto;
+      z-index: 10;
+      padding: 4rem 7.5rem;
+
+      .h1 {
+        padding: 3rem;
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: black;
+        text-transform: uppercase;
+      }
+      form {
+        div {
+          display: flex;
+          flex-direction: column;
+          label {
+            // margin-top: 3rem;
+            font-weight: 400;
+            font-size: 1.6rem;
+            font-family: "Roboto";
+            color: black;
+            margin-bottom: 9px;
+          }
+          input[type="text"],
+          input[type="email"],
+          input[type="password"],
+          input[type="number"],
+          input[type="tel"] {
+            outline: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1.5px dotted;
+            height: 30px;
+            background: none;
+            color: black;
+          }
+          ::placeholder {
+            font-style: italic;
+          }
+          .ul {
+            color: red;
+            padding: 1rem 1.2rem;
+            li {
+              font-size: 12px;
+              font-weight: 400;
+            }
+          }
+        }
+        div.number {
+          label {
+            margin-bottom: 9px;
+          }
+          div {
+            margin-top: 0;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            select {
+              width: 100px;
+              background-color: transparent;
+              color: black;
+              border-top: none;
+              border-left: none;
+              border-right: none;
+              border-bottom: 1.5px dotted;
+              outline: none;
+              option {
+                padding: 1rem;
+              }
+            }
+            input {
+              width: 100%;
+              margin-left: 2.2rem;
+            }
+          }
+        }
+        div.knowUs {
+          select {
+            width: 100%;
+            background-color: transparent;
+            color: black;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1.5px dotted;
+            outline: none;
+            padding: 0.6rem 0;
+            option {
+              padding: 1rem;
+            }
+          }
+        }
+        div:not(:nth-child(1)) {
+          margin-top: 3rem;
+        }
+        div.capctha {
+          display: flex;
+          align-items: center;
+          margin: 2.6rem auto 1.8rem;
+        }
+        div.agreement {
+          background-color: #3c3c3c;
+          color: white;
+          padding: 1.8rem 4rem;
+          text-align: center;
+          font-weight: 400;
+          font-size: 12px;
+          a {
+            text-decoration: underline;
+          }
+        }
+        button.submit {
+          margin-top: 2.2rem;
+          width: 100%;
+          padding: 0.6rem;
+          background-color: var(--bg-header-color);
+          color: white;
+          outline: none;
+          border: none;
+          cursor: pointer;
+        }
       }
     }
   }
