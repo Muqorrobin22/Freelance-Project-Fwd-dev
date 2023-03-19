@@ -64,66 +64,68 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <section className={styles.logo}>
-        <p className={styles.p}>LOGO HERE</p>
-      </section>
-      <section className={styles.connect}>
-        <div className={styles.liveChat}>
-          <Image
-            src={liveChat.src}
-            alt={liveChat.alt}
-            width={liveChat.width}
-            height={liveChat.height}
-          />
-          <p>Live Chat</p>
-        </div>
-        <div className={styles.whatsapp}>
-          <Image
-            src={whatsapp.src}
-            alt={whatsapp.alt}
-            width={whatsapp.width}
-            height={whatsapp.height}
-          />
-          <p>WhatsApp</p>
-        </div>
-        <div
-          className={
-            isMobile ? `${styles.language} ${styles.hidden}` : styles.language
-          }
-        >
-          <Image
-            src={indonesia.src}
-            alt={indonesia.alt}
-            width={indonesia.width}
-            height={indonesia.height}
-          />
-          <Image
-            src={english.src}
-            alt={english.alt}
-            width={english.width}
-            height={english.height}
-            className={styles.english}
-          />
-        </div>
-      </section>
-      <section className={styles.form}>
-        {isMobile && <Mobile />}
+      <div className={styles.wrapper}>
+        <section className={styles.logo}>
+          <p className={styles.p}>LOGO HERE</p>
+        </section>
+        <section className={styles.connect}>
+          <div className={styles.liveChat}>
+            <Image
+              src={liveChat.src}
+              alt={liveChat.alt}
+              width={liveChat.width}
+              height={liveChat.height}
+            />
+            <p>Live Chat</p>
+          </div>
+          <div className={styles.whatsapp}>
+            <Image
+              src={whatsapp.src}
+              alt={whatsapp.alt}
+              width={whatsapp.width}
+              height={whatsapp.height}
+            />
+            <p>WhatsApp</p>
+          </div>
+          <div
+            className={
+              isMobile ? `${styles.language} ${styles.hidden}` : styles.language
+            }
+          >
+            <Image
+              src={indonesia.src}
+              alt={indonesia.alt}
+              width={indonesia.width}
+              height={indonesia.height}
+            />
+            <Image
+              src={english.src}
+              alt={english.alt}
+              width={english.width}
+              height={english.height}
+              className={styles.english}
+            />
+          </div>
+        </section>
+        <section className={styles.form}>
+          {isMobile && <Mobile />}
 
-        {!isMobile && (
-          <>
-            <form>
-              <input type="text" placeholder="Username/Email" />
-              <input type="password" placeholder="Password" />
-            </form>
-            <a href="#" className={styles.button}>
-              Masuk
-            </a>
-            <a href="#" className={styles.button}>
-              Daftar
-            </a>
-          </>
-        )}
-      </section>
+          {!isMobile && (
+            <>
+              <form>
+                <input type="text" placeholder="Username/Email" />
+                <input type="password" placeholder="Password" />
+              </form>
+              <a href="#" className={styles.button}>
+                Masuk
+              </a>
+              <a href="#" className={styles.button}>
+                Daftar
+              </a>
+            </>
+          )}
+        </section>
+      </div>
     </header>
   );
 }
