@@ -163,4 +163,43 @@
       }
     }
   }
+
+  // Responsiveness
+  //   ----------------- Phone version
+  @media (min-width: 375px) {
+    .nav {
+      overflow-y: scroll;
+      text-align: center;
+      width: 100%;
+      justify-content: flex-start;
+      scrollbar-width: none;
+      a {
+        margin-right: 5.7rem;
+        h1 {
+          font-size: 1.3rem;
+          width: 72px;
+        }
+      }
+    }
+    .nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .form {
+      .register {
+        width: 90%;
+        padding: 2.2rem;
+      }
+    }
+  }
+
+  //   ----------------- Tablet version
+  @media (min-width: 600px) {
+    .form {
+      .register {
+        width: 535px;
+        padding: 4rem 7.5rem;
+      }
+    }
+  }
 }

@@ -103,6 +103,40 @@
 
   //   ----------------- Phone version
   @media (min-width: 375px) {
+    padding: 0 0 3.7rem;
+    .footerTop {
+      nav {
+        justify-content: space-around;
+      }
+    }
+    .footerMiddle {
+      nav {
+        display: none;
+      }
+    }
+    .footerBottom {
+      flex-direction: column;
+      .second {
+        margin: 3rem 0;
+        h1 {
+          margin-left: 0;
+        }
+        .wrap {
+          justify-content: flex-start;
+        }
+      }
+      .third {
+        width: 100%;
+        .wrap {
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          .greenTemp {
+            margin-right: 2rem;
+            margin-bottom: 1.7rem;
+          }
+        }
+      }
+    }
   }
 
   //   ----------------- tablet version
@@ -120,6 +154,7 @@
     }
 
     .footerBottom {
+      flex-direction: row;
       .second {
         h1 {
           text-align: left;

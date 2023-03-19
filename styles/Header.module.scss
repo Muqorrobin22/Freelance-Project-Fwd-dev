@@ -76,6 +76,22 @@
 
   //   ----------------- Phone version
   @media (min-width: 375px) {
+    padding: 10px;
+
+    .connect {
+      .liveChat,
+      .whatsapp {
+        p {
+          display: none;
+        }
+      }
+      .whatsapp {
+        margin-left: 2.3rem;
+      }
+      .language.hidden {
+        display: none;
+      }
+    }
   }
 
   // ------------- Tablet Version

@@ -1,34 +1,65 @@
 import styles from "../../styles/Header.module.scss";
 import Image from "next/image";
+// import { useMediaQuery } from "react-responsive";
+import { useState, useEffect } from "react";
+import Mobile from "../utils/header/Mobile";
+// import { useMediaQuery } from "@/hooks/useMediaQueries";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
+let whatsapp = {
+  src: "/images/whatsapp.png",
+  alt: "Whatsapp Images",
+  height: 30,
+  width: 30,
+  use: "Whatsapp",
+};
+
+let liveChat = {
+  src: "/images/liveChat.png",
+  alt: "Live Chat Image",
+  height: 30,
+  width: 32,
+};
+
+let english = {
+  src: "/images/english.png",
+  alt: "English Language",
+  height: 19,
+  width: 31,
+};
+
+let indonesia = {
+  src: "/images/indo.png",
+  alt: "Indonesia Language",
+  height: 19,
+  width: 31,
+};
+
+let burgerMenu = {
+  src: "/images/burgermenu.png",
+  alt: "Hamburger Menu",
+  height: 12,
+  width: 18,
+};
+
+let burgerClose = {
+  src: "/images/Burger_Close.png",
+  alt: "Hamburger Menu Close",
+  height: 12,
+  width: 18,
+};
 
 function Header() {
-  let whatsapp = {
-    src: "/images/whatsapp.png",
-    alt: "Whatsapp Images",
-    height: 30,
-    width: 30,
-    use: "Whatsapp",
-  };
+  // const isMobile = useMediaQuery({
+  //   query: "(max-width: 600px)",
+  // });
 
-  let liveChat = {
-    src: "/images/liveChat.png",
-    alt: "Live Chat Image",
-    height: 30,
-    width: 32,
-  };
+  const isMobile = useMediaQuery("(max-width:600px)");
 
-  let english = {
-    src: "/images/english.png",
-    alt: "English Language",
-    height: 19,
-    width: 31,
-  };
+  const [isClicked, setIsClicked] = useState(false);
 
-  let indonesia = {
-    src: "/images/indo.png",
-    alt: "Indonesia Language",
-    height: 19,
-    width: 31,
+  const handleClick = () => {
+    setIsClicked((prev) => !prev);
   };
 
   return (
@@ -55,7 +86,11 @@ function Header() {
           />
           <p>WhatsApp</p>
         </div>
-        <div className={styles.language}>
+        <div
+          className={
+            isMobile ? `${styles.language} ${styles.hidden}` : styles.language
+          }
+        >
           <Image
             src={indonesia.src}
             alt={indonesia.alt}
@@ -72,16 +107,22 @@ function Header() {
         </div>
       </section>
       <section className={styles.form}>
-        <form>
-          <input type="text" placeholder="Username/Email" />
-          <input type="password" placeholder="Password" />
-        </form>
-        <a href="#" className={styles.button}>
-          Masuk
-        </a>
-        <a href="#" className={styles.button}>
-          Daftar
-        </a>
+        {isMobile && <Mobile />}
+
+        {!isMobile && (
+          <>
+            <form>
+              <input type="text" placeholder="Username/Email" />
+              <input type="password" placeholder="Password" />
+            </form>
+            <a href="#" className={styles.button}>
+              Masuk
+            </a>
+            <a href="#" className={styles.button}>
+              Daftar
+            </a>
+          </>
+        )}
       </section>
     </header>
   );
