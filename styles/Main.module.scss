@@ -195,6 +195,9 @@
 
   //   ----------------- Tablet version
   @media (min-width: 600px) {
+    .nav {
+      justify-content: center;
+    }
     .form {
       .register {
         width: 535px;
