@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import NavbarMobile from "../modile/navbarMobile";
+import NavbarMobile from "../modile/NavbarMobile";
 import styles from "../../../styles/Mobile.module.scss";
 
 let burgerClose = {
