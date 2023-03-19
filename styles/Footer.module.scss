@@ -100,7 +100,55 @@
   }
 
   // Responsiveness
-  @media (min-width: 1400px) {
+
+  //   ----------------- Phone version
+  @media (min-width: 375px) {
+  }
+
+  //   ----------------- tablet version
+  @media (min-width: 600px) {
+    padding: 12px 37px;
+    .footerMiddle {
+      nav {
+        a {
+          img {
+            width: 86px;
+            height: 21px;
+          }
+        }
+      }
+    }
+
+    .footerBottom {
+      .second {
+        h1 {
+          text-align: left;
+          margin-left: 30px;
+        }
+      }
+      .third {
+        h1 {
+          margin-left: 31px;
+        }
+        .wrap {
+          justify-content: space-evenly;
+        }
+      }
+    }
+  }
+
+  //-----------------------------Desktop Verison
+  @media (min-width: 1200px) {
     padding: 12px 187px;
+    .footerMiddle {
+      nav {
+        a {
+          img {
+            width: 120px;
+            height: 30px;
+          }
+        }
+      }
+    }
   }
 }
