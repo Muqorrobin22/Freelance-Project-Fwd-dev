@@ -116,6 +116,7 @@
     }
     .footerBottom {
       flex-direction: column;
+      margin: 20px;
       .second {
         margin: 3rem 0;
         h1 {
@@ -144,7 +145,10 @@
     padding: 12px 37px;
     .footerMiddle {
       nav {
+        display: flex;
+        justify-content: space-between;
         a {
+          //   margin-right: 1rem;
           img {
             width: 86px;
             height: 21px;
@@ -166,7 +170,7 @@
       }
       .third {
         h1 {
-          margin-left: 31px;
+          margin-left: 21px;
         }
         .wrap {
           justify-content: space-evenly;
@@ -185,6 +189,16 @@
             width: 120px;
             height: 30px;
           }
+        }
+      }
+    }
+    .footerBottom {
+      .third {
+        h1 {
+          margin-left: 2px;
+        }
+        .wrap {
+          justify-content: flex-start;
         }
       }
     }
