@@ -16,41 +16,35 @@ let indonesia = {
 };
 
 let burgerClose = {
-  src: "/images/Burger_Close.png",
+  src: "/images/burgerClose.png",
   alt: "Hamburger Menu Close",
-  height: 18,
-  width: 18,
+  height: 14,
+  width: 14,
 };
 
 export default function NavbarMobile({ handleClick }) {
   return (
     <nav className={styles.nav}>
-      <div className={styles.closeButton}>
-        <Image
-          src={burgerClose.src}
-          alt={burgerClose.alt}
-          width={burgerClose.width}
-          height={burgerClose.height}
-          onClick={handleClick}
-          className={styles.img}
-        />
-      </div>
-      <form className={styles.form}>
-        <input
-          type="text"
-          placeholder="Username/Email"
-          className={styles.text}
-        />
-        <input type="password" placeholder="Password" />
-      </form>
-      <div className={styles.wrapButton}>
+      <div className={styles.wrap}>
+        <a href="#" className={`${styles.button} ${styles.daftar}`}>
+          Daftar
+        </a>
         <a href="#" className={styles.button}>
           Masuk
         </a>
-        <a href="#" className={styles.button}>
-          Daftar
-        </a>
+
+        <div className={styles.imgWrap}>
+          <Image
+            src={burgerClose.src}
+            alt={burgerClose.alt}
+            width={burgerClose.width}
+            height={burgerClose.height}
+            onClick={handleClick}
+            className={styles.img}
+          />
+        </div>
       </div>
+
       <div className={styles.language}>
         <h1>Switch Language</h1>
         <div>
