@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-  padding: 1rem 2rem;
 
   .wrap {
     display: flex;
@@ -46,6 +45,37 @@
     }
   }
 
+  .menuScroll {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2.9rem auto 2.3rem;
+    overflow-y: scroll;
+    width: 100%;
+    scrollbar-width: none;
+    background-color: #333333;
+    padding: 1.5rem 0.5rem;
+    a {
+      margin: 0 1.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 13px;
+        text-transform: uppercase;
+        width: 72px;
+        text-align: center;
+      }
+    }
+  }
+  .menuScroll::-webkit-scrollbar {
+    display: none;
+  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -72,18 +102,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5rem;
     justify-content: space-evenly;
-    width: 70%;
-    margin: 4rem auto;
-    h1 {
-      font-size: 14px;
-    }
+    width: 140px;
     div {
-      margin-top: 3rem;
       display: flex;
       justify-content: space-evenly;
       width: 100%;
+      margin-left: 3rem;
     }
   }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    a {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+      padding: 1rem 3.7rem;
+      border-bottom: 1px solid #595959;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  background-color: #000000;
+  opacity: 0.5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
