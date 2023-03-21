@@ -44,12 +44,14 @@ export default function NavbarMobile({ handleClick }) {
     <>
       <nav className={styles.nav}>
         <div className={styles.wrap}>
-          <a href="#" className={`${styles.button} ${styles.daftar}`}>
-            Daftar
-          </a>
-          <a href="#" className={styles.button}>
-            Masuk
-          </a>
+          <div className={styles.buttonWrap}>
+            <a href="#" className={`${styles.button} ${styles.daftar}`}>
+              Daftar
+            </a>
+            <a href="#" className={styles.button}>
+              Masuk
+            </a>
+          </div>
 
           <div className={styles.imgWrap}>
             <Image

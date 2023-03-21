@@ -16,32 +16,36 @@
     display: flex;
     align-items: center;
     margin: 2.1rem 1.5rem;
-    .button {
-      width: 99px;
-      background-color: #666666;
-      font-weight: 700;
-      color: white;
-      border-radius: 5px;
-      padding: 1.5rem 2.4rem;
-      font-size: 13px;
-      margin-left: 1.1rem;
-      transition: all 0.2s ease;
-      text-align: center;
-      color: white;
-      text-transform: uppercase;
-    }
-    .button.daftar {
-      background-color: var(--bg-header-color);
-      margin-left: 1.6rem;
-    }
-    .button:hover {
-      opacity: 1;
+    justify-content: space-between;
+    .buttonWrap {
+      .button {
+        width: 99px;
+        background-color: #666666;
+        font-weight: 700;
+        color: white;
+        border-radius: 5px;
+        padding: 1.5rem 2.4rem;
+        font-size: 13px;
+        margin-left: 1.1rem;
+        transition: all 0.2s ease;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+      }
+      .button.daftar {
+        background-color: var(--bg-header-color);
+        margin-left: 1.6rem;
+      }
+      .button:hover {
+        opacity: 1;
+      }
     }
     .imgWrap {
       margin-left: 2rem;
       display: flex;
       align-items: center;
       margin-right: 2rem;
+      justify-self: flex-end;
     }
   }
 
